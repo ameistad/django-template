@@ -1,6 +1,7 @@
-# amei-django-template
+# dokku-django-template
 
 A simple [Django](http://www.djangoproject.com/ "Django project") template for deploying to [Dokku](http://progrium.viewdocs.io/dokku/ "Dokku documentation").
+
 This is mostly for personal use and it's not very well documented. 
 
 
@@ -9,7 +10,6 @@ This is mostly for personal use and it's not very well documented.
 - Should deploy to both Dokku and Heroku.
 - Whitenoise serving static files. 
 - Django 1.8 and Python 3
-
 
 ## Template installation
 
