@@ -1,0 +1,4 @@
+-r common.txt
+
+gunicorn==19.3.0
+dj-database-url==0.3.0
