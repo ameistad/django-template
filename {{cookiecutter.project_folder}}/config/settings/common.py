@@ -16,7 +16,7 @@ BASE_DIR = dirname(dirname(dirname(__file__)))
 
 # Secret key
 # Todo: do something reasonable with this.
-SECRET_KEY = 'h0s0gty^gt=s)bg)mcwhjokiom#bpz=z&!*44%i1svi_^&cv)3'
+SECRET_KEY = 'CHANGE_THIS!'
 
 # Application definition
 
