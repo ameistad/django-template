@@ -14,7 +14,7 @@ This template is mostly for personal learning and proably does not use best prac
 ## Template installation
 ```sh
 $ pip install cookiecutter
-$ cookiecutter https://github.com/ameistad/amei-django-template.git
+$ cookiecutter https://github.com/ameistad/dokku-django-template.git
 ```
 
 See README.md and DEPLOY.md in generated project folder for instructions.
