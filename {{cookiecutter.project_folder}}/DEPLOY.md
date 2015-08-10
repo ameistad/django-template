@@ -37,30 +37,29 @@ $ git push dokku master
 $ dokku postgresql:link {{ cookiecutter.repo_name }} {{ cookiecutter.repo_name }}
 ```
 
-### Migrate and create super user (Server side)
+Migrate and create super user (Server side)
 ```sh
 $ dokku run {{ cookiecutter.repo_name }} python manage.py migrate
 $ dokku run {{ cookiecutter.repo_name }} python manage.py createsuperuser
 ```
 
-#### Viewing logs on Dokku (Server side)
+Viewing logs on Dokku (Server side)
 ```sh
 $ docker ps
 $ docker attach <CONTAINER ID>
 ```
 
 
-# Deploying to Heroku (Client side)
-### Git
+## Deploying to Heroku (Client side)
+Install [Heroku toolbelt](https://toolbelt.heroku.com/)
+
+Git
 ```sh
 $ cd {{ cookiecutter.repo_name }}
-$ git init
-$ git add .
-$ git commit -m "first commit"
+$ git init && git add . && git commit -m "First commit"
 ```
 
-### Installing the app
-Install [Heroku toolbelt](https://toolbelt.heroku.com/)
+Installing the app
 ```sh
 $ heroku create --buildpack https://github.com/heroku/heroku-buildpack-python --region eu {{ cookiecutter.repo_name }}
 $ heroku addons:create heroku-postgresql:hobby-dev
