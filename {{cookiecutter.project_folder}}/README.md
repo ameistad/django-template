@@ -3,20 +3,26 @@
 
 # Local development
 ## Installing virtual environment
+```sh
 $ cd your_projects_dir
 $ cd your_environments_dir
 $ python3.4 -m venv project_name
 $ source project_name/bin/activate
+```
 
 ## Installing requirements 
-$ cd {{ cookiecutter.project_folder }}
+```sh
+$ cd {{ cookiecutter.repo_name }}
 $ pip install -r requirements/local.txt
-$ createdb {{ cookiecutter.project_folder }}
+$ createdb {{ cookiecutter.repo_name }}
+```
 
-## Migrating database and starting development server
+## Migrate and start development server
+```sh
 $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
+```
 
 
-See DEPLOY.md for instructions on how to deploy the site to Dokku and Heroku.
+### See DEPLOY.md for instructions on how to deploy the site to Dokku and Heroku.

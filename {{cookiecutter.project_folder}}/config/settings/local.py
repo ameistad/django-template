@@ -11,7 +11,7 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '{{ cookiecutter.project_folder }}',
+        'NAME': '{{ cookiecutter.repo_name }}',
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost',

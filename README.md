@@ -12,7 +12,6 @@ This template is mostly for personal learning and proably does not use best prac
 - Django 1.8 and Python 3
 
 ## Template installation
-
 ```sh
 $ pip install cookiecutter
 $ cookiecutter https://github.com/ameistad/amei-django-template.git
