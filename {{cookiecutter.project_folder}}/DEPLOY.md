@@ -1,17 +1,17 @@
 # Deploying to Dokku
 
 ### Alias to run all commands except postgres install client side.
-#### Add this to .bash_profiles, .bashrc or other startup scripts. 
+Add this to .bash_profiles, .bashrc or other startup scripts. 
 ```
 alias dokku="ssh -t root@<server> dokku"
 ```
 
 ### Git (Client side)
-´´´sh
+```sh
 $ cd {{ cookiecutter.repo_name }}
 $ git init && git add . && git commit -m "First commit"
 $ git remote add dokku dokku@<server>:{{ cookiecutter.repo_name }}
-´´´
+```
 
 ### Installing PostgreSQL plugin (Server side)
 ```sh
