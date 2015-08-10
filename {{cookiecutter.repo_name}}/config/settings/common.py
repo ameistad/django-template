@@ -16,6 +16,7 @@ from os.path import dirname, join
 BASE_DIR = dirname(dirname(dirname(__file__)))
 
 # Secret key
+# https://docs.djangoproject.com/en/1.8/ref/settings/#secret-key
 # Todo: do something reasonable with this.
 SECRET_KEY = 'CHANGE_THIS!'
 
@@ -79,6 +80,14 @@ USE_I18N = False
 USE_L10N = True
 
 USE_TZ = True
+
+# Managers
+# https://docs.djangoproject.com/en/1.8/ref/settings/#managers
+ADMINS = (
+    ("""{{ cookiecutter.author_name }}""", '{{ cookiecutter.email }}'),
+)
+
+MANAGERS = ADMINS
 
 
 # Static files (CSS, JavaScript, Images)
