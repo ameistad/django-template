@@ -50,7 +50,7 @@ $ docker attach <CONTAINER ID>
 ```
 
 
-Deploying to Heroku (Client side)
+## Deploying to Heroku (Client side)
 Install [Heroku toolbelt](https://toolbelt.heroku.com/)
 
 Git
