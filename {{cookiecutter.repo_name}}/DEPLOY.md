@@ -1,7 +1,10 @@
 ## Deploying to Dokku
+Template is tested on Digital Ocean with Dokku 0.3.22 on Ubuntu 14.04
+Sign up to Digital Ocean with my [referral link](https://www.digitalocean.com/?refcode=22eaf729706a) to get $10 credit.
 
-Alias to run all commands except postgres install client side.
-Add this to .bash_profiles, .bashrc or other startup scripts. 
+
+Optional alias to run all commands except postgresql install on the client side.
+Add this to start up script e.g .bash_profile or .bashrc.
 ```
 alias dokku="ssh -t root@<server> dokku"
 ```
@@ -9,7 +12,7 @@ alias dokku="ssh -t root@<server> dokku"
 Git (Client side)
 ```sh
 $ cd {{ cookiecutter.repo_name }}
-$ git init && git add . && git commit -m "First commit"
+$ git init && git add -A && git commit -m "First commit"
 $ git remote add dokku dokku@<server>:{{ cookiecutter.repo_name }}
 ```
 
@@ -56,7 +59,7 @@ Install [Heroku toolbelt](https://toolbelt.heroku.com/)
 Git
 ```sh
 $ cd {{ cookiecutter.repo_name }}
-$ git init && git add . && git commit -m "First commit"
+$ git init && git add -A && git commit -m "First commit"
 ```
 
 Installing the app
