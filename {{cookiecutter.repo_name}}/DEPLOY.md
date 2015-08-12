@@ -1,5 +1,5 @@
 ## Deploying to Dokku
-Template is tested on Digital Ocean with Dokku 0.3.22 on Ubuntu 14.04
+Template is tested on Digital Ocean with Dokku 0.3.22 on Ubuntu 14.04  
 Sign up to Digital Ocean with my [referral link](https://www.digitalocean.com/?refcode=22eaf729706a) to get $10 credit.
 
 
