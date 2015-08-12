@@ -3,10 +3,10 @@
 Django settings for {{ cookiecutter.project_name }}.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/1.8/topics/settings/
+https://docs.djangoproject.com/en/stable/topics/settings/
 
 For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.8/ref/settings/
+https://docs.djangoproject.com/en/stable/ref/settings/
 """
 
 # Build paths inside the project like this: join(BASE_DIR, "directory")
@@ -16,7 +16,7 @@ from os.path import dirname, join
 BASE_DIR = dirname(dirname(dirname(__file__)))
 
 # Secret key
-# https://docs.djangoproject.com/en/1.8/ref/settings/#secret-key
+# https://docs.djangoproject.com/en/stable/ref/settings/#secret-key
 # Todo: do something reasonable with this.
 SECRET_KEY = 'CHANGE_THIS!'
 
@@ -70,7 +70,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.8/topics/i18n/
+# https://docs.djangoproject.com/en/stable/topics/i18n/
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC' # Europe/Oslo
@@ -82,7 +82,7 @@ USE_L10N = True
 USE_TZ = True
 
 # Managers
-# https://docs.djangoproject.com/en/1.8/ref/settings/#managers
+# https://docs.djangoproject.com/en/stable/ref/settings/#managers
 ADMINS = (
     ("""{{ cookiecutter.author_name }}""", '{{ cookiecutter.email }}'),
 )
@@ -91,7 +91,7 @@ MANAGERS = ADMINS
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
+# https://docs.djangoproject.com/en/stable/howto/static-files/
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [join(BASE_DIR, 'static')]
