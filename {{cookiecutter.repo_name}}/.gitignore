@@ -1,0 +1,25 @@
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Sublime Text 
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+
+# Remove if you want to include project files
+*.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+# Generated files
+*.log
+*.pot
+*.pyc
+.idea
+
+# Environment files
+*.env

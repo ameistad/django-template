@@ -1,6 +1,5 @@
-# {{ cookiecutter.project_name }}
-{{ cookiecutter.description }}  
-A Django project by {{ cookiecutter.author_name }} <{{ cookiecutter.email }}>
+# {{ cookiecutter.project_name }}  
+{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>
 
 ### Local development
 Installing virtual environment

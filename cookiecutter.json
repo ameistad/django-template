@@ -3,6 +3,5 @@
     "repo_name": "{{ cookiecutter.project_name|replace(' ', '_') }}",
     "author_name": "Your name",
     "email": "Your email",
-    "description": "A short description of the project.",
     "python_version": "python-3.4.3"
 }
