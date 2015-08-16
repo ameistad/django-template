@@ -4,5 +4,5 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', TemplateView.as_view(template_name='start.html'), name="start"),
+    url(r'^$', TemplateView.as_view(template_name='start.html'), name='start'),
 ]
