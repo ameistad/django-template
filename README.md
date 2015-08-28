@@ -2,8 +2,6 @@
 
 A simple [Django](http://www.djangoproject.com/ "Django project") template for deploying to [Dokku](http://progrium.viewdocs.io/dokku/ "Dokku documentation").
 
-This template is mostly for personal learning and proably does not use best practices.
-
 
 - [Cookiecutter](https://github.com/audreyr/cookiecutter "Cookiecutter project") for installing.
 - PostgreSQL in development and production.
