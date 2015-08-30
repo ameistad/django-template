@@ -7,8 +7,6 @@ from .common import *  # noqa
 
 DEBUG = False
 
-TEMPLATE_DEBUG = False
-
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS += ('gunicorn', )
