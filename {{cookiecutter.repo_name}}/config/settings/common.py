@@ -9,16 +9,23 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/stable/ref/settings/
 """
 
+import environ
+from os.path import dirname, join, exists
+
+# Django-environ for using 12-factor environment variables (http://http://12factor.net/)
+env = environ.Env()
+
+env_file = join(dirname(__file__), '.env')
+
+if exists(env_file):
+    environ.Env.read_env(str(env_file))
+
 # Build paths inside the project like this: join(BASE_DIR, "directory")
-from os.path import dirname, join
-
-
 BASE_DIR = dirname(dirname(dirname(__file__)))
 
-# Secret key
+# Secret key from environment variables
 # https://docs.djangoproject.com/en/stable/ref/settings/#secret-key
-# Todo: do something reasonable with this.
-SECRET_KEY = 'CHANGE_THIS!'
+SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # Application definition
 
@@ -68,6 +75,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
+
+# Database
+# https://docs.djangoproject.com/en/stable/ref/settings/#databases
+# Get databases from DATABASE_URL or to default settings (https://django-environ.readthedocs.org/en/latest/).
+DATABASES = {
+    'default': env.db(),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/stable/topics/i18n/

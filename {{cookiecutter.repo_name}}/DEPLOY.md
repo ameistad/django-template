@@ -1,4 +1,5 @@
 ## Deploying to Dokku
+Tested on [Digital Ocean](https://digitalocean.com) with Dokku 0.3.26 on Ubuntu 14.04.  
 
 Optional alias to run all commands except postgresql install on the client side.
 Add this to start up script e.g .bash_profile or .bashrc.
@@ -24,6 +25,7 @@ Create app, database and set config (Server side)
 ```sh
 $ dokku apps:create {{ cookiecutter.repo_name }}
 $ dokku postgresql:create {{ cookiecutter.repo_name }}
+$ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SECRET_KEY=`openssl rand -base64 32`
 $ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SETTINGS_MODULE='config.settings.production'
 ```
 
@@ -63,6 +65,7 @@ Installing the app
 ```sh
 $ heroku create --buildpack https://github.com/heroku/heroku-buildpack-python --region eu {{ cookiecutter.repo_name }}
 $ heroku addons:create heroku-postgresql:hobby-dev
+$ heroku config:set DJANGO_SECRET_KEY=`openssl rand -base64 32`
 $ heroku config:set DJANGO_SETTINGS_MODULE='config.settings.production'
 $ git push heroku master
 $ heroku run python manage.py migrate

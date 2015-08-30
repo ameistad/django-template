@@ -10,7 +10,7 @@ $ python3.4 -m venv {{ cookiecutter.repo_name }}
 $ source {{ cookiecutter.repo_name }}/bin/activate
 ```
 
-Installing requirements and create database
+Installing requirements and create PostgreSQL database
 ```sh
 $ cd {{ cookiecutter.repo_name }}
 $ pip install -r requirements/local.txt
