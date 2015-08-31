@@ -2,7 +2,7 @@
 Tested on [Digital Ocean](https://digitalocean.com) with Dokku 0.3.26 on Ubuntu 14.04.  
 
 Optional alias to run all commands except postgresql install on the client side.
-Add this to start up script e.g .bash_profile or .bashrc.
+Add this to start up script, e.g .bash_profile or .bashrc.
 ```
 alias dokku="ssh -t root@<server> dokku"
 ```
