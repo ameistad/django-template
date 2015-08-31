@@ -15,7 +15,8 @@ from os.path import dirname, join, exists
 # Django-environ for using 12-factor environment variables (http://http://12factor.net/)
 env = environ.Env()
 
-env_file = join(dirname(__file__), '.env')
+# .env file to store environment variables.
+env_file = join(dirname(__file__), 'development.env')
 
 if exists(env_file):
     environ.Env.read_env(str(env_file))

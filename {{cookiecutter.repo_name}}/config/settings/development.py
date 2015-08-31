@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Local configuration
 
-from .common import *  # noqa
+from .base import *  # noqa
 
 
 DEBUG = True

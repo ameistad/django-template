@@ -1,0 +1,10 @@
+# Environment variables
+# *.env files are not tracked by git so your secrets are safe.
+
+DJANGO_SECRET_KEY=CHANGE_THIS_TO_SOMETHING_ELSE
+
+DATABASE_URL=postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{ cookiecutter.repo_name }}
+
+# Alternative database settings
+#DATABASE_URL=postgres://username:password@127.0.0.1:5432/database
+#DATABASE_URL=sqlite:///db.sqlite3

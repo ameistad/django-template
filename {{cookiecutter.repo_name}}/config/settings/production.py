@@ -2,7 +2,7 @@
 # Production settings
 # https://docs.djangoproject.com/en/stable/howto/deployment/checklist/
 
-from .common import *  # noqa
+from .base import *  # noqa
 
 
 DEBUG = False

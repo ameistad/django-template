@@ -1,7 +1,7 @@
 # {{ cookiecutter.project_name }}  
 {{ cookiecutter.author_name }} <{{ cookiecutter.email }}>
 
-### Local development
+### Local development quick start
 Installing virtual environment
 ```sh
 $ cd your_projects_dir
