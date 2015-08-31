@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Local configuration
+# Development settings
 
 from .base import *  # noqa
 

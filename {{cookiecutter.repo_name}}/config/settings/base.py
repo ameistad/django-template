@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/stable/ref/settings/
 import environ
 from os.path import dirname, join, exists
 
-# Django-environ for using 12-factor environment variables (http://http://12factor.net/)
+
+# Django-environ for using 12-factor environment variables.
+# http://12factor.net/)
 env = environ.Env()
 
 # .env file to store environment variables.
@@ -79,7 +81,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/stable/ref/settings/#databases
-# Get databases from DATABASE_URL or to default settings (https://django-environ.readthedocs.org/en/latest/).
+# Get databases from DATABASE_URL.
+# https://django-environ.readthedocs.org/en/latest/
 DATABASES = {
     'default': env.db(),
 }

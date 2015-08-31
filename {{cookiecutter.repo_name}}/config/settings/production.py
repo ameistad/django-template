@@ -11,7 +11,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS += ('gunicorn', )
 
-# Simplified static file serving.
+# Simplified static file serving with whitenoise.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
