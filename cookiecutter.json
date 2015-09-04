@@ -1,8 +1,9 @@
 {
-    "project_name": "your_django_project",
+    "project_name": "My Django Project",
     "repo_name": "{{ cookiecutter.project_name|replace(' ', '_') }}",
     "author_name": "Your name",
     "email": "Your email",
     "windows": "n",
-    "python_version": "python-3.4.3"
+    "python_version": "python-3.4.3",
+    "dokku_server": "mydokkuserver.com" 
 }
