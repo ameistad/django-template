@@ -13,7 +13,7 @@ $ source {{ cookiecutter.repo_name }}/bin/activate
 Installing requirements and create PostgreSQL database
 ```sh
 $ cd {{ cookiecutter.repo_name }}
-$ pip install -r requirements/local.txt
+$ pip install -r requirements/development.txt
 $ createdb {{ cookiecutter.repo_name }}
 ```
 
