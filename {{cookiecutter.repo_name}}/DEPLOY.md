@@ -10,7 +10,7 @@ $ git clone https://github.com/Kloadut/dokku-pg-plugin postgresql
 $ dokku plugins-install
 ```
 
-Optional alias to run all commands on the client side.    
+Optional alias to run all commands client side.    
 Add this to start up script, e.g .bash_profile or .bashrc.
 ```
 alias dokku="ssh -t root@{{ cookiecutter.dokku_server }} dokku"
@@ -60,7 +60,7 @@ $ cd {{ cookiecutter.repo_name }}
 $ git init && git add -A && git commit -m "First commit"
 ```
 
-Installing the app
+Deploying the app
 ```sh
 $ heroku create --buildpack https://github.com/heroku/heroku-buildpack-python --region eu {{ cookiecutter.repo_name }}
 $ heroku addons:create heroku-postgresql:hobby-dev
