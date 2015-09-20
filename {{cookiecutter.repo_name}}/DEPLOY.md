@@ -30,6 +30,7 @@ $ dokku apps:create {{ cookiecutter.repo_name }}
 $ dokku postgresql:create {{ cookiecutter.repo_name }}
 $ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SECRET_KEY=`openssl rand -base64 32`
 $ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SETTINGS_MODULE='config.settings.production'
+$ dokku postgresql:link {{ cookiecutter.repo_name }} {{ cookiecutter.repo_name }}
 ```
 
 Push repository to Dokku (Client side)
