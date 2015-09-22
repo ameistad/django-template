@@ -1,0 +1,4 @@
+{
+  "tests/tests.py::TestCookiecutterSubstitution::test_default_configuration": true,
+  "tests/tests.py::TestCookiecutterSubstitution::test_windows_enabled": true
+}
