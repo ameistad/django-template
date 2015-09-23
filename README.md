@@ -19,4 +19,4 @@ $ pip install cookiecutter
 $ cookiecutter https://github.com/ameistad/dokku-django-template.git
 ```
 
-See README.md and DEPLOY.md in generated project folder for instructions.
+See docs/ in generated project folder for instructions.

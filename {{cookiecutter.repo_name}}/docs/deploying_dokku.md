@@ -1,6 +1,4 @@
-# Deploying your project
-
-## Dokku
+# Deploying to Dokku
 This template was tested successfully on [Digital Ocean](https://digitalocean.com) with Dokku 0.3.26 on Ubuntu 14.04.    
 
 First make sure you have a PostgreSQL plugin installed on your Dokku VPS
@@ -48,26 +46,4 @@ Viewing logs on Dokku (Server side)
 ```sh
 $ docker ps
 $ docker attach <CONTAINER ID>
-```
-
-
-## Deploying to Heroku (Client side)
-Install [Heroku toolbelt](https://toolbelt.heroku.com/)
-
-Git
-```sh
-$ cd {{ cookiecutter.repo_name }}
-$ git init && git add -A && git commit -m "First commit"
-```
-
-Deploying the app
-```sh
-$ heroku create --buildpack https://github.com/heroku/heroku-buildpack-python --region eu {{ cookiecutter.repo_name }}
-$ heroku addons:create heroku-postgresql:hobby-dev
-$ heroku config:set DJANGO_SECRET_KEY=`openssl rand -base64 32`
-$ heroku config:set DJANGO_SETTINGS_MODULE='config.settings.production'
-$ git push heroku master
-$ heroku run python manage.py migrate
-$ heroku run python manage.py createsuperuser
-$ heroku open
 ```
