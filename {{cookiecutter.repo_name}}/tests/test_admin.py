@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.mark.django_db
-def test_welcome_django(admin_client):
+def test_admin(admin_client):
     """
     Tests whether the admin page sends a 200 HTTP status code as response.
     """

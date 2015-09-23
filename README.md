@@ -11,6 +11,7 @@ A simple [Django](http://www.djangoproject.com/ "Django project") template for d
 - PostgreSQL in development and production.
 - Should deploy to both Dokku and Heroku.
 - Whitenoise serving static files. 
+- Detailed instructions for deployng to Dokku.
 
 ## Template installation
 ```sh

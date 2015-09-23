@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.mark.django_db
-def test_welcome_django(client):
+def test_startpage(client):
     """
     Tests whether the base url page sends a 200 HTTP status code as response.
     """
