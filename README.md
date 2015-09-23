@@ -1,4 +1,5 @@
 # dokku-django-template  
+[![Build Status](https://travis-ci.org/ameistad/dokku-django-template.svg?branch=master)](https://travis-ci.org/ameistad/dokku-django-template)
 [![Requirements Status](https://requires.io/github/ameistad/dokku-django-template/requirements.svg?branch=master)](https://requires.io/github/ameistad/dokku-django-template/requirements/?branch=master)
 
 A simple [Django](http://www.djangoproject.com/ "Django project") template for deploying to [Dokku](http://progrium.viewdocs.io/dokku/ "Dokku documentation").
