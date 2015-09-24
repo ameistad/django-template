@@ -91,7 +91,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/stable/topics/i18n/
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC' # Europe/Oslo
+TIME_ZONE = 'UTC'  # Example: Europe/Oslo
 
 USE_I18N = False
 
