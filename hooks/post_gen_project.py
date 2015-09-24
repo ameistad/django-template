@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Hook to rename development.keep to development.env after generating the project.
+"""
+Hook to rename development.keep to development.env
+after generating the project.
+"""
 
 import os
 
