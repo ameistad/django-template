@@ -23,3 +23,6 @@ sftp-config.json
 
 # Environment files
 *.env
+
+# sqlite
+*.sqlite3
