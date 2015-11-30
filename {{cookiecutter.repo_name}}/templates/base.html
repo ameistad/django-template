@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% raw %}{% load staticfiles %}<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -19,13 +19,13 @@
   <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{% static 'img/dt_logo.png' %}{% endraw %}">
+  <link rel="icon" type="image/png" href="{% static 'img/dt_logo.png' %}">
 
 </head>
 <body>
 
   <!-- Content block -->
-{% block content %}{% endblock %}
+{% block content %}<p>Text inside block content</p>{% endblock %}{% endraw %}
 
 
 </body>
