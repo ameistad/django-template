@@ -1,4 +1,4 @@
-# dokku-django-template  
+# amei-django-template  
 [![Build Status](https://travis-ci.org/ameistad/dokku-django-template.svg?branch=master)](https://travis-ci.org/ameistad/dokku-django-template)
 [![Requirements Status](https://requires.io/github/ameistad/dokku-django-template/requirements.svg?branch=master)](https://requires.io/github/ameistad/dokku-django-template/requirements/?branch=master)
 
