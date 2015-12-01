@@ -1,11 +1,9 @@
 # Deploying to Dokku
-This template was tested successfully on [Digital Ocean](https://digitalocean.com) with Dokku 0.3.26 on Ubuntu 14.04.    
+This template was tested successfully on [Digital Ocean](https://digitalocean.com) with Dokku 0.4.5 on Ubuntu 14.04.    
 
 First make sure you have a PostgreSQL plugin installed on your Dokku VPS
 ```sh
-$ cd /var/lib/dokku/plugins
-$ git clone https://github.com/Kloadut/dokku-pg-plugin postgresql
-$ dokku plugins-install
+$ dokku plugin:install https://github.com/Kloadut/dokku-pg-plugin postgresql
 ```
 
 Optional alias to run all commands client side.    
