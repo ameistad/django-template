@@ -3,7 +3,7 @@ This template was tested successfully on [Digital Ocean](https://digitalocean.co
 
 First make sure you have a PostgreSQL plugin installed on your Dokku VPS
 ```sh
-$ dokku plugin:install https://github.com/Kloadut/dokku-pg-plugin postgresql
+$ dokku plugin:install https://github.com/dokku/dokku-postgres.git
 ```
 
 Optional alias to run all commands client side.    
@@ -23,10 +23,10 @@ $ git remote add dokku dokku@{{ cookiecutter.dokku_server }}:{{ cookiecutter.rep
 Create app, database and set environment variables (Server side)
 ```sh
 $ dokku apps:create {{ cookiecutter.repo_name }}
-$ dokku postgresql:create {{ cookiecutter.repo_name }}
+$ dokku postgres:create {{ cookiecutter.repo_name }}-database
 $ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SECRET_KEY=`openssl rand -base64 32`
 $ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SETTINGS_MODULE='config.settings.production'
-$ dokku postgresql:link {{ cookiecutter.repo_name }} {{ cookiecutter.repo_name }}
+$ dokku postgres:link {{ cookiecutter.repo_name }}-databse {{ cookiecutter.repo_name }}
 ```
 
 Push repository to Dokku (Client side)
