@@ -6,17 +6,17 @@ A simple [Django](http://www.djangoproject.com/ "Django project") template for d
 
 
 - [Cookiecutter](https://github.com/audreyr/cookiecutter "Cookiecutter project") for installing.
-- Django 1.8 and Python 3.
-- Django-environ for 12 factor inspired environment variables.
+- Django 1.9 and Python 3.
+- [Twelve-factor](http://12factor.net/) inpired environment variables with django-environ.
 - PostgreSQL in development and production.
 - Should deploy to both Dokku and Heroku.
 - Whitenoise serving static files. 
-- Detailed instructions for deployng to Dokku.
+- Detailed instructions for deploying to Dokku.
 
-## Template installation
+## Instructions
 ```sh
 $ pip install cookiecutter
 $ cookiecutter https://github.com/ameistad/dokku-django-template.git
 ```
 
-See docs/ in generated project folder for instructions.
+See docs/ in generated project folder for instructions on local development and deploying.
