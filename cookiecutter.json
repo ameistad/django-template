@@ -4,6 +4,6 @@
     "author_name": "Your name",
     "email": "Your email",
     "windows": "n",
-    "python_version": "python-3.4.3",
+    "python_version": "python-3.5.0",
     "dokku_server": "mydokkuserver.com" 
 }
