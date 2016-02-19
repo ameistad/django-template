@@ -24,7 +24,7 @@ Create app, database and set environment variables (Server side)
 ```sh
 $ dokku apps:create {{ cookiecutter.repo_name }}
 $ dokku postgres:create {{ cookiecutter.repo_name }}-database
-$ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SECRET_KEY=`openssl rand -base64 32`
+$ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SECRET_KEY=`openssl rand -base64 55`
 $ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SETTINGS_MODULE='config.settings.production'
 $ dokku postgres:link {{ cookiecutter.repo_name }}-databse {{ cookiecutter.repo_name }}
 ```
