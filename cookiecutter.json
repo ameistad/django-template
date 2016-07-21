@@ -2,6 +2,7 @@
     "project_name": "my django project",
     "repo_name": "{{ cookiecutter.project_name|replace(' ', '_') }}",
     "author_name": "Your name",
+    "project_description": "Project description",
     "email": "Your email",
     "windows": "n",
     "python_version": "python-3.5.1",
