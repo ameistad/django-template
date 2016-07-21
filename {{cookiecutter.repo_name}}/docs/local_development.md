@@ -6,13 +6,13 @@ Install virtual environment.
 ```sh
 $ cd your_projects_dir
 $ cd your_environments_dir
-$ python3 -m venv gulpsetup
-$ source gulpsetup/bin/activate
+$ python3 -m venv {{ cookiecutter.project_name }}
+$ source {{ cookiecutter.project_name }}/bin/activate
 ```
 
 Install requirements and create a database.
 ```sh
-$ cd gulpsetup
+$ cd {{ cookiecutter.project_name }}
 $ pip install -r requirements/development.txt
 $ createdb gulpsetup
 ```
@@ -27,10 +27,10 @@ $ python manage.py runserver
 # Gulp
 Make sure [Node.js](https://nodejs.org/en/) is installed. 
 
-Install Gulp globally and install dependencies.
+Install Gulp globally and dependencies.
 ```sh
 $ npm install -g gulp
-$ npm install --save-dev
+$ npm install
 ```
 
 Run Gulp
