@@ -5,5 +5,5 @@
     "email": "Your email",
     "windows": "n",
     "python_version": "python-3.5.1",
-    "dokku_server": "mydokkuserver.com" 
+    "dokku_server": "example.com" 
 }
