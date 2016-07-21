@@ -24,5 +24,8 @@ sftp-config.json
 # Environment files
 *.env
 
-# sqlite
+# Sqlite
 *.sqlite3
+
+# npm
+node_modules/
