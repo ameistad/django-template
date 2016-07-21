@@ -1,22 +1,39 @@
-# Local development quick start
-Installing virtual environment
+# Local development
+PostgreSQL neees to be installed. 
+For Mac OS X [Postgres.app](http://postgresapp.com/) is recommended.
+
+Install virtual environment.
 ```sh
 $ cd your_projects_dir
 $ cd your_environments_dir
-$ python3.4 -m venv {{ cookiecutter.repo_name }}
-$ source {{ cookiecutter.repo_name }}/bin/activate
+$ python3 -m venv gulpsetup
+$ source gulpsetup/bin/activate
 ```
 
-Installing requirements and creating a database
+Install requirements and create a database.
 ```sh
-$ cd {{ cookiecutter.repo_name }}
+$ cd gulpsetup
 $ pip install -r requirements/development.txt
-$ createdb {{ cookiecutter.repo_name }}
+$ createdb gulpsetup
 ```
 
-Migrate and start development server
+Migrate and start development server.
 ```sh
 $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
+
+# Gulp
+Make sure [Node.js](https://nodejs.org/en/) is installed. 
+
+Install Gulp globally and install dependencies.
+```sh
+$ npm install -g gulp
+$ npm install --save-dev
+```
+
+Run Gulp
+```sh
+$ gulp
+```sh
