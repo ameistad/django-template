@@ -16,6 +16,11 @@ import environ
 # http://12factor.net/)
 env = environ.Env()
 
+# Load environment files from file in development
+env_file = join(dirname(__file__), 'development.env')
+if exists(env_file):
+    environ.Env.read_env(str(env_file))
+
 # Build paths inside the project like this: join(BASE_DIR, "directory")
 BASE_DIR = dirname(dirname(dirname(__file__)))
 
