@@ -9,24 +9,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/stable/ref/settings/
 """
 
-from os.path import dirname, join, exists
 import environ
 
 # Django-environ for using 12-factor environment variables.
 # http://12factor.net/)
 env = environ.Env()
 
-# Load environment files from file in development
-env_file = join(dirname(__file__), 'development.env')
-if exists(env_file):
-    environ.Env.read_env(str(env_file))
-
-# Build paths inside the project like this: join(BASE_DIR, "directory")
-BASE_DIR = dirname(dirname(dirname(__file__)))
+# Build paths inside the project like this: str(BASE_DIR.path('directory'))
+BASE_DIR = environ.Path(__file__) - 3
 
 # Secret key from environment variables
 # https://docs.djangoproject.com/en/stable/ref/settings/#secret-key
-SECRET_KEY = env('DJANGO_SECRET_KEY')
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='this_is_a_secret')
 
 # Application definition
 
@@ -60,7 +54,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            join(BASE_DIR, 'templates'),
+            str(BASE_DIR.path('templates')),
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -82,7 +76,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Get databases from DATABASE_URL.
 # https://django-environ.readthedocs.org/en/latest/
 DATABASES = {
-    'default': env.db(),
+    'default': env.db('DATABASE_URL', default='postgres:///{{ cookiecutter.repo_name }}'),
 }
 
 # Internationalization
@@ -109,6 +103,8 @@ MANAGERS = ADMINS
 # https://docs.djangoproject.com/en/stable/howto/static-files/
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [join(BASE_DIR, 'static')]
+STATICFILES_DIRS = (
+    str(BASE_DIR.path('static')),
+)
 
 STATIC_ROOT = 'staticfiles'
