@@ -9,9 +9,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/stable/ref/settings/
 """
 
-import environ
 from os.path import dirname, join, exists
-
+import environ
 
 # Django-environ for using 12-factor environment variables.
 # http://12factor.net/)
@@ -19,7 +18,6 @@ env = environ.Env()
 
 # .env file to store environment variables.
 env_file = join(dirname(__file__), 'development.env')
-
 if exists(env_file):
     environ.Env.read_env(str(env_file))
 
@@ -106,7 +104,6 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/stable/howto/static-files/
