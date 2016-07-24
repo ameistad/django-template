@@ -4,17 +4,16 @@
 
 My boilerplate for starting Django projects.
 
-
-- [Cookiecutter](https://github.com/audreyr/cookiecutter "Cookiecutter project") for installing.
 - Django 1.9 and Python 3.
 - [Twelve-factor](http://12factor.net/) inpired environment variables with django-environ.
 - PostgreSQL in development and production.
 - Docker, Dokku or Heroku
 
 ## Install
+Uses [Cookiecutter](https://github.com/audreyr/cookiecutter "Cookiecutter project") for installing.
 ```sh
 $ pip install cookiecutter
-$ cookiecutter https://github.com/ameistad/dokku-django-template.git
+$ cookiecutter https://github.com/ameistad/django-template.git
 ```
 
 See docs/ in generated project folder for instructions on local development and deploying.
