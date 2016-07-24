@@ -1,9 +1,23 @@
-# Deploying with Docker
+# Deploying on Digital Ocean
 
 ```sh
-# Build
-docker-compose build
+# Create a Digital Ocean Docker droplet with a personal access token.
+# https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2
+$ docker-machine create -d digitalocean --digitalocean-access-token=ACCESS_TOKEN {{ cookiecutter.repo_name }}
 
-# Run
-docker-compose up
+# Check that the machine is running
+$ docker-machine ls
+
+# Load Docker environment into the shell and set {{ cookiecutter.repo_name }} as the active machine.
+$ eval "$(docker-machine env  {{ cookiecutter.repo_name }})"
+
+# Build images defined in docker-compose.yml
+$ docker-compose build
+
+# Start services defined in docker-compose.yml
+$ docker-compose up -d
+
+# Unset Docker environment variables when finished.
+$ eval "$(docker-machine env -u)"
 ```
+
