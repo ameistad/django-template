@@ -9,7 +9,7 @@ $ dokku plugin:install https://github.com/dokku/dokku-postgres.git
 Optional alias to run all commands client side.    
 Add this to start up script, e.g .bash_profile or .bashrc.
 ```
-alias dokku="ssh -t root@{{ cookiecutter.dokku_server }} dokku"
+alias dokku="ssh -t root@{{ cookiecutter.domain_name }} dokku"
 ```
 
 ### Deploying to Dokku 
@@ -17,7 +17,7 @@ Git (Client side)
 ```sh
 $ cd {{ cookiecutter.repo_name }}
 $ git init && git add -A && git commit -m "First commit"
-$ git remote add dokku dokku@{{ cookiecutter.dokku_server }}:{{ cookiecutter.repo_name }}
+$ git remote add dokku dokku@{{ cookiecutter.domain_name }}:{{ cookiecutter.repo_name }}
 ```
 
 Create app, database and set environment variables (Server side)
