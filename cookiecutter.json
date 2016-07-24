@@ -1,6 +1,6 @@
 {
     "project_name": "my django project",
-    "repo_name": "{{ cookiecutter.project_name|replace(' ', '_') }}",
+    "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
     "author_name": "Your name",
     "project_description": "Project description",
     "email": "Your email",
