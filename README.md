@@ -6,7 +6,6 @@
 My boilerplate for starting Django projects.
 
 - Django 1.9 and Python 3.
-- [Twelve-factor](http://12factor.net/) inpired environment variables with django-environ.
 - PostgreSQL in development and production.
 - Docker, Dokku or Heroku
 
