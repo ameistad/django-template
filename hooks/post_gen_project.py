@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Hook to rename development.keep to development.env
+Hook to rename .env.keep to .env
 after generating the project.
 """
 
@@ -9,8 +9,8 @@ import os
 
 
 repo_dir = './config/settings'
-old_env_file = os.path.join(repo_dir, 'development.keep')
-new_env_file = os.path.join(repo_dir, 'development.env')
+old_env_file = os.path.join(repo_dir, '.env.keep')
+new_env_file = os.path.join(repo_dir, '.env')
 
 os.rename(old_env_file, new_env_file)
 

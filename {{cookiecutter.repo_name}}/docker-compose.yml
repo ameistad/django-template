@@ -1,0 +1,30 @@
+version: '2'
+
+volumes:
+  pgdata: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./docker/django/Dockerfile
+    env_file: ./config/settings/.env
+    command: /gunicorn.sh
+    depends_on:
+      - postgres
+    user: django
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+
+  nginx:
+    build: ./docker/nginx
+    depends_on:
+      - django
+    ports:
+      - "0.0.0.0:80:80"
+

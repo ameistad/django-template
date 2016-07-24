@@ -76,8 +76,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Get databases from DATABASE_URL.
 # https://django-environ.readthedocs.org/en/latest/
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///{{ cookiecutter.repo_name }}'),
+    'default': env.db('DJANGO_DATABASE_URL', default='postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{ cookiecutter.repo_name }}'),
 }
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/stable/topics/i18n/
