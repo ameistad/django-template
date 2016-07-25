@@ -34,7 +34,7 @@ INSTALLED_APPS = (
     # Third party app
 
     # Own apps
-    'apps.users.apps.UsersConfig',
+
 )
 
 MIDDLEWARE_CLASSES = (
