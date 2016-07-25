@@ -34,6 +34,7 @@ INSTALLED_APPS = (
     # Third party app
 
     # Own apps
+    'apps.users.apps.UsersConfig',
 
 )
 
@@ -109,3 +110,6 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = 'staticfiles'
+
+# Custom user model
+AUTH_USER_MODEL = 'users.User'
