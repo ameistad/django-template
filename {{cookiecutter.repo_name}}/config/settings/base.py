@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/stable/ref/settings/
 
 import environ
 
-# Django-environ for using 12-factor environment variables.
-# http://12factor.net/)
+# Django-environ for loading settings from environment variables.
 env = environ.Env()
 
 # Build paths inside the project like this: str(BASE_DIR.path('directory'))
@@ -35,6 +34,7 @@ INSTALLED_APPS = (
     # Third party app
 
     # Own apps
+    'apps.users.apps.UsersConfig',
 )
 
 MIDDLEWARE_CLASSES = (
