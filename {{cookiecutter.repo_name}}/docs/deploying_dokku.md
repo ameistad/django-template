@@ -29,6 +29,12 @@ $ dokku config:set {{ cookiecutter.repo_name }} DJANGO_SETTINGS_MODULE='config.s
 $ dokku postgres:link {{ cookiecutter.repo_name }}-databse {{ cookiecutter.repo_name }}
 ```
 
+Set Mailgun api key (Server side).
+This is optional. See config/production.py for email settings.
+```sh
+$ dokku config:set {{ cookiecutter.repo_name }} DJANGO_MAILGUN_API_KEY=your_api_key
+```
+
 Push repository to Dokku (Client side)
 ```sh
 $ git push dokku master
