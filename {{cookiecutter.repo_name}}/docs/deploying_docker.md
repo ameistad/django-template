@@ -17,6 +17,9 @@ $ docker-compose build
 # Start services in detached mode.
 $ docker-compose up -d
 
+# Migrate and create superuser.
+$ docker-compose run django migrate
+$ docker-compose run django createsuperuser
 # Unset Docker environment variables when finished.
 $ eval "$(docker-machine env -u)"
 ```
