@@ -22,7 +22,7 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-static-top navbar-dark bg-inverse">
+    <nav class="navbar navbar-static-top">
       <a class="navbar-brand" href="#">{% endraw %}{{ cookiecutter.project_name }}{% raw %}</a>
       <ul class="nav navbar-nav">
         <li class="nav-item active">
@@ -31,9 +31,24 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
+      </ul>
+
+      <ul class="nav navbar-nav pull-xs-right">
+        {% if user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="{% url 'user:profile' user.username %}">Profile</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'user:logout' %}">Log out</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'user:login' %}">Log in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'user:registration_register' %}">Sign up</a>
+        </li>
+        {% endif %}
       </ul>
     </nav>
 

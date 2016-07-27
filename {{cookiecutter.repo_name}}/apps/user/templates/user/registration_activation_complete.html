@@ -1,0 +1,13 @@
+{% raw %}{% extends 'base.html' %}
+
+{% block content %}
+<div class="container m-t-2">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Activation complete</h4>
+      <p>Email is verified and account activated.</p>
+      <a class="btn btn-primary btn-sm" href="{% url 'user:login' %}">Log in</a>
+    </div>
+  </div>
+</div>
+{% endblock %}{% endraw %}
