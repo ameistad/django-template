@@ -1,7 +1,8 @@
-{% raw %}You or someone pretending to be you registered a new user account at {{ site }} with the username {{ user }}.
-Please visit {{ protocol }}://{{ site.domain }}{% url 'user:registration_activate' %}{{ activation_key }} within {{ expiration_days}} days to activate this account.
+{% raw %}You or someone pretending to be you registered a new user account on 127.0.0.1:8000 with the username {{ user }}.
+Please visit http://127.0.0.1:8000{% url 'user:registration_activate' activation_key %} within {{ expiration_days}} days to activate this account.
 
 If you didn't register this account, just ignore this e-mail.
 
 Regards,
-{{ site.domain }}{% endraw %}
+admin
+{% endraw %}
