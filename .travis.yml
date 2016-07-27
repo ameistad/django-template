@@ -3,4 +3,4 @@ python:
   - "3.4"
 install:
   - pip install cookiecutter
-script: "./travis.sh"
+script: "./test_script.sh"
