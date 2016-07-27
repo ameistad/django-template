@@ -56,7 +56,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             str(BASE_DIR.path('templates')),
-            ],
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +77,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Get databases from DATABASE_URL.
 # https://django-environ.readthedocs.org/en/latest/
 DATABASES = {
-    'default': env.db('DJANGO_DATABASE_URL', default='postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{ cookiecutter.repo_name }}'),
+    'default': env.db('DATABASE_URL',
+        default='postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{ cookiecutter.repo_name }}'),
 }
 
 
