@@ -15,7 +15,7 @@ class CustomUserChangeForm(UserChangeForm):
 class CustomUserCreationForm(UserCreationForm):
 
     error_message = UserCreationForm.error_messages.update({
-        'duplicate_username': 'This username has already been taken.'
+        'duplicate_username': 'This username already exists.'
     })
 
     class Meta(UserCreationForm.Meta):
@@ -35,10 +35,11 @@ class CustomUserAdmin(AuthUserAdmin):
     form = CustomUserChangeForm
     add_form = CustomUserCreationForm
     fieldsets = (
-        ('Profile', {'fields': ( 'username', 'name', 'email', 'password')}),
+        ('Profile', {'fields': ('username', 'name', 'email', 'password')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser',
-                                       'groups', 'user_permissions')}),
+                                    'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
-    list_display = ('username', 'name', 'is_superuser', 'date_joined')
+    list_display = ('username', 'name', 'is_active',
+                    'is_superuser', 'date_joined')
     search_fields = ['name']
