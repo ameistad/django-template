@@ -24,12 +24,15 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-# Gulp
+# Gulp for Sass compiling.
 Make sure [Node.js](https://nodejs.org/en/) is installed. 
 
-Install Gulp globally and dependencies.
+Install Gulp globally
 ```sh
 $ npm install -g gulp
+
+Install dependencies as defined in package.json to {{ cookiecutter.repo_name}}/node_modules/
+```sh
 $ npm install
 ```
 
