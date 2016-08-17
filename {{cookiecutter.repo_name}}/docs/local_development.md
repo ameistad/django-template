@@ -19,7 +19,6 @@ $ createdb gulpsetup
 
 Migrate and start development server.
 ```sh
-$ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
