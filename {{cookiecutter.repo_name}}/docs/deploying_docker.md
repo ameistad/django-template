@@ -28,8 +28,8 @@ $ docker-compose up -d
 
 ## Migrate and create superuser.
 ```sh
-$ docker-compose run django migrate
-$ docker-compose run django createsuperuser
+$ docker-compose run django python /app/manage.py migrate
+$ docker-compose run django python /app/manage.py createsuperuser
 ```
 
 ## Unset Docker environment variables when finished.
