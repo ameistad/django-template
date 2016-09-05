@@ -1,1 +1,0 @@
-{% raw %}New account registration at {{ site }}{% endraw %}

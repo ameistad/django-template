@@ -34,8 +34,6 @@ INSTALLED_APPS = (
     # Third party app
 
     # Own apps
-    'apps.user.apps.UserConfig',
-
 )
 
 MIDDLEWARE_CLASSES = (
@@ -111,12 +109,3 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = 'staticfiles'
-
-# User
-AUTH_USER_MODEL = 'user.User'  # Custom user model
-LOGIN_REDIRECT_URL = 'user:redirect'
-LOGIN_URL = 'user:login'
-
-# User registration
-ACCOUNT_ACTIVATION_DAYS = 7  # One-week user registration activation window.
-REGISTRATION_OPEN = True

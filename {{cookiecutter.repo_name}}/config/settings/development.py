@@ -5,9 +5,6 @@ from .base import *  # noqa
 
 DEBUG = True
 
-# Django debug toolbar.
-INSTALLED_APPS += ('debug_toolbar', )
-
 ALLOWED_HOSTS = []
 
 # Email backend that writes messages to console instead of sending them.
