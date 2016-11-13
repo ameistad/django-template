@@ -1,4 +1,4 @@
 Django==1.10.3
-django-environ==0.4.0
+django-environ==0.4.1
 psycopg2==2.6.2
 whitenoise==3.2.2
