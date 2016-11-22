@@ -5,7 +5,7 @@
 
 My boilerplate for starting Django projects.
 
-- Django 1.9 and Python 3.
+- Django 1.10 and Python 3.
 - PostgreSQL in development and production.
 - Docker, Dokku or Heroku
 
