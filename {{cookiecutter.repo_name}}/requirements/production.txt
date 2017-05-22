@@ -1,4 +1,4 @@
 -r base.txt
 
 gunicorn==19.7.1
-django-anymail==0.9
+django-anymail==0.10
