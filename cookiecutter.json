@@ -5,6 +5,5 @@
     "project_description": "Project description",
     "email": "Your email",
     "windows": "n",
-    "python_version": "python-3.5.1",
-    "domain_name": "example.com" 
+    "domain_name": "example.com"
 }
