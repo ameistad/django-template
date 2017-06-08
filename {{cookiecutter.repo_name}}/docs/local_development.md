@@ -17,7 +17,6 @@ $ pip install -r requirements/development.txt
 ```
 
 # Create a new database with PostgreSQL.
-# Postgres.app recommended on macOS.
 ```sh
 $ createdb {{ cookiecutter.project_name }}
 ```
