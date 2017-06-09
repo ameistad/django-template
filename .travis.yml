@@ -1,8 +1,9 @@
 language: python
 python:
   - "3.6"
-script:
+install:
   - pip install cookiecutter
+script:
   - cookiecutter . --no-input --overwrite-if-exists
   - pip install -r my_django_project/requirements/testing.txt
   - pytest my_django_project/
