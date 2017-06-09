@@ -7,7 +7,7 @@ My boilerplate for starting Django projects.
 
 - Django 1.11 and Python 3.
 - PostgreSQL in development and production.
-- Supports Docker deployment.
+- Supports Docker with Letsencrypt deployment. (Modified from [django-cookiecutter](https://github.com/pydanny/cookiecutter-django))
 
 ## Install
 Uses [Cookiecutter](https://github.com/audreyr/cookiecutter "Cookiecutter project") for installing.
@@ -16,4 +16,4 @@ $ pip install cookiecutter
 $ cookiecutter https://github.com/ameistad/django-template.git
 ```
 
-See docs/ in generated project folder for instructions on local development and deploying.
+See docs/ in generated project folder for instructions.
