@@ -99,6 +99,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# Default admin url
+ADMIN_URL = r'^admin/'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/stable/howto/static-files/
 STATIC_URL = '/static/'
