@@ -22,7 +22,6 @@ BASE_DIR = environ.Path(__file__) - 3
 SECRET_KEY = env('DJANGO_SECRET_KEY', default='this_is_a_secret')
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -31,11 +30,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Third party app
+    # Third party apps
 
     # Own apps
 ]
 
+# Middleware
+# https://docs.djangoproject.com/en/stable/topics/http/middleware/
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -111,3 +112,7 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = 'staticfiles'
+
+# Media files
+MEDIA_ROOT = str(BASE_DIR.path('media'))
+MEDIA_URL = '/media/'
