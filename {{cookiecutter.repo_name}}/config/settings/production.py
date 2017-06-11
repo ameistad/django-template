@@ -25,6 +25,15 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL',
                          default='{{ cookiecutter.repo_name }} <noreply@{{ cookiecutter.domain_name }}>')
 
+# Send XFrame Options deny header
+X_FRAME_OPTIONS = 'DENY'
+
+# Use secure cookies
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+
 # INSTALLED_APPS += ("anymail", )
 # ANYMAIL = {
 #     "MAILGUN_API_KEY": env('DJANGO_MAILGUN_API_KEY'),
