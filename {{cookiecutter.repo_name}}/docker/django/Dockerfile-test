@@ -1,4 +1,4 @@
-FROM python:3.5
+FROM python:3.6
 
 # Don't write *.pyc files.
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -14,7 +14,7 @@ RUN groupadd -r django && useradd -r -g django django
 COPY . /app
 RUN chown -R django /app
 
-COPY ./compose/django/entrypoint.sh /entrypoint.sh
+COPY ./docker/django/entrypoint.sh /entrypoint.sh
 RUN sed -i 's/\r//' /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
