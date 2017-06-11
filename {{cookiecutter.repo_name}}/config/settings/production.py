@@ -6,8 +6,6 @@ from .base import *  # noqa
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
 # Custom admin url
 ADMIN_URL = env('DJANGO_ADMIN_URL')
 
