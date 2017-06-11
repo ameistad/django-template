@@ -26,7 +26,7 @@ __Load Docker environment into the shell and set {{ cookiecutter.repo_name }} as
 ```sh
 $ eval "$(docker-machine env  {{ cookiecutter.repo_name }})"
 ```
-Make sure the result of `docker-machine active` returns {{ cooiecutter.repo_name }}
+Make sure the result of `docker-machine active` returns {{ cookiecutter.repo_name }}
 
 __Build images as defined in docker-compose.yml.__
 ```sh
