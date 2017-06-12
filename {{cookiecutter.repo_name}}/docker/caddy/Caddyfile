@@ -27,5 +27,5 @@
     }
 
     # The email address to use with which to generate a certificate with Letsencrypt.
-    tls ameistad@gmail.com
+    tls {{ cookiecutter.email }}
 }
