@@ -59,4 +59,4 @@ __SSH into the machine__
 You might need to reset the root password on http://digitalocean.com
 ```sh
 $ docker-machine ssh {{ cookiecutter.repo_name }}
-``
+```
