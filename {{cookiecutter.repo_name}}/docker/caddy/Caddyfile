@@ -1,7 +1,8 @@
 {{ cookiecutter.domain_name }} {
     proxy / django:5000 {
-        header_upstream Host {host}
-        header_downstream X-Forwarded-Proto {scheme}
+        # Passes thru host information from the original request.
+        # https://caddyserver.com/docs/proxy
+        transparent
 
         # Don't show Gunicorn as server header
         header_downstream -Server
