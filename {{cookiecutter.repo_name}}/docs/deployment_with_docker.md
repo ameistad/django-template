@@ -7,12 +7,6 @@ __Make sure settings are correct__
 
 * Check that domain is correct in `docker-compose.yml`.
 
-__Diffie-Hellman Parameters__
-This creates DH Parameters with a 2048 bit long safe prime.
-```sh
-$ openssl dhparam -out docker/nginx/dhparams.pem 2048
-```
-
 __Create a Digital Ocean Docker droplet with a personal access token.__
 [Get Digital Ocean access token](https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2)
 [Docker Digital Ocean driver](https://docs.docker.com/machine/drivers/digital-ocean/)
