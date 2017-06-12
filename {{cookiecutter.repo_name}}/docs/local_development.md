@@ -1,5 +1,5 @@
 # Local development
-PostgreSQL neees to be installed.
+PostgreSQL needs to be installed.
 For Mac OS X [Postgres.app](http://postgresapp.com/) is recommended.
 
 Install virtual environment.
