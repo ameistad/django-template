@@ -7,7 +7,7 @@ set -e
 # database in restore.sh. Check that something else is used here
 if [ "$POSTGRES_USER" == "postgres" ]
 then
-    echo "restoring as the postgres user is not supported, make sure to set the POSTGRES_USER environment variable"
+    echo "Restoring as the postgres user is not supported, make sure to set the POSTGRES_USER environment variable"
     exit 1
 fi
 

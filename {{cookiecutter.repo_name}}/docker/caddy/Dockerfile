@@ -1,7 +1,4 @@
 FROM alpine:3.5
-LABEL maintainer "Andreas Meistad <ameistad@gmail.com>"
-
-LABEL caddy_version="0.10.3" architecture="amd64"
 
 RUN apk add --no-cache openssh-client git tar curl
 
