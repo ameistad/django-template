@@ -2,8 +2,10 @@
 This is an example how you could deploy the project to Digital Ocean with Docker.
 
 __Make sure settings are correct__
-- Check that the `.env` file is setyp correctly.
-- Check that domain is correct in `docker-compose.yml`
+
+* Check that the `.env` file is setup correctly.
+
+* Check that domain is correct in `docker-compose.yml`.
 
 __Diffie-Hellman Parameters__
 This creates DH Parameters with a 2048 bit long safe prime.
@@ -22,6 +24,9 @@ __Check that the machine is running.__
 ```sh
 $ docker-machine ls
 ```
+
+__Set domain record__
+Make sure {{ cookiecutter.domain_name }} points to your new docker-machine.
 
 __Load Docker environment into the shell and set {{ cookiecutter.repo_name }} as the active machine.__
 ```sh
@@ -51,7 +56,7 @@ __Unset Docker environment variables when finished.__
 $ eval "$(docker-machine env -u)"
 ```
 
-# Administrate the remote docker-machine
+## Administrate the remote docker-machine
 __Check logs__
 ```sh
 $ docker-compose logs
