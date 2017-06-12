@@ -12,7 +12,8 @@ $ openssl dhparam -out docker/nginx/dhparams.pem 2048
 ```
 
 __Create a Digital Ocean Docker droplet with a personal access token.__
-https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2
+[Get Digital Ocean access token](https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2)
+[Docker Digital Ocean driver](https://docs.docker.com/machine/drivers/digital-ocean/)
 ```sh
 $ docker-machine create --driver digitalocean --digitalocean-region=ams2 --digitalocean-access-token=ACCESS_TOKEN {{ cookiecutter.repo_name }}
 ```
@@ -26,6 +27,7 @@ __Load Docker environment into the shell and set {{ cookiecutter.repo_name }} as
 ```sh
 $ eval "$(docker-machine env  {{ cookiecutter.repo_name }})"
 ```
+
 Make sure the result of `docker-machine active` returns {{ cookiecutter.repo_name }}
 
 __Build images as defined in docker-compose.yml.__
