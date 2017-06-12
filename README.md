@@ -18,3 +18,5 @@ $ cookiecutter https://github.com/ameistad/django-template.git
 ```
 
 See docs/ in generated project folder for instructions.
+
+Django and PostgreSQL Docker setup is borrowed (stolen) from the awesome [django-cookiecutter project](https://github.com/pydanny/django-cookiecutter).
