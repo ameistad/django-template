@@ -29,7 +29,6 @@ services:
       - certbot
     ports:
       - "0.0.0.0:80:80"
-
     environment:
       - MY_DOMAIN_NAME={{ cookiecutter.domain_name }}
     ports:
