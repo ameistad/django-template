@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # Third party apps
 
     # Own apps
+    'apps.users.apps.UsersConfig'
 ]
 
 # Middleware
@@ -116,3 +117,6 @@ STATIC_ROOT = 'staticfiles'
 # Media files
 MEDIA_ROOT = str(BASE_DIR.path('media'))
 MEDIA_URL = '/media/'
+
+# Custom user model
+AUTH_USER_MODEL = 'users.User'
