@@ -31,6 +31,6 @@
         X-Frame-Options "DENY"
     }
 
-    # The email address to use with which to generate a certificate with Letsencrypt.
+    # The email address to use to generate a certificate with Letsencrypt.
     tls {{ cookiecutter.email }}
 }
