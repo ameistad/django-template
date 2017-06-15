@@ -24,6 +24,10 @@
         # Edit this if you need external sources on your site.
         # See: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
         header_downstream +Content-Security-Policy "connect-src 'self'; default-src 'none'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src data: 'self'; object-src 'self'; style-src 'self'; script-src 'self';"
+
+        # Don't allow resources to load within a frame/iframe.
+        # This is taken care with frame-ancestors 'none' is the content security policy. But not yet supported by older browsers.
+        header_downstream +X-Frame-Options "DENY"
     }
 
     # The email address to use with which to generate a certificate with Letsencrypt.
