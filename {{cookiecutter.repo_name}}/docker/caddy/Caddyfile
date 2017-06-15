@@ -1,17 +1,16 @@
 {{ cookiecutter.domain_name }} {
     proxy / django:5000 {
-        # Passes thru host information from the original request.
+        # Passes through host information from the original request.
         # https://caddyserver.com/docs/proxy
         transparent
 
-        # Don't show Gunicorn as server header
+        # Don't show Gunicorn as server header.
         header_downstream -Server
 
-        # Enable HTTP Strict Transport Security (HSTS) to force clients to always
-        # connect via HTTPS (do not use if only testing)
+        # Enable HTTP Strict Transport Security (HSTS) to force clients to always connect via HTTPS (do not use if only testing)
         # header_downstream +Strict-Transport-Security "max-age=31536000;"
 
-        # Referrer policy
+        # Don't send referer header.
         header_downstream +Referrer-Policy "no-referrer"
 
         # Enable cross-site filter (XSS) and tell browser to block detected attacks
@@ -26,7 +25,7 @@
         header_downstream +Content-Security-Policy "connect-src 'self'; default-src 'none'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src data: 'self'; object-src 'self'; style-src 'self'; script-src 'self';"
 
         # Don't allow resources to load within a frame/iframe.
-        # This is taken care with frame-ancestors 'none' is the content security policy. But not yet supported by older browsers.
+        # This is handled with frame-ancestors 'none' in the content security policy. But not yet supported by older browsers.
         header_downstream +X-Frame-Options "DENY"
     }
 
