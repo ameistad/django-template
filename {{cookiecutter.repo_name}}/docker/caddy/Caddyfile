@@ -10,7 +10,7 @@
         -Server
 
         # Enable HTTP Strict Transport Security (HSTS) to force clients to always connect via HTTPS (do not use if only testing)
-        Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+        # Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
 
         # Don't send referer header.
         Referrer-Policy "no-referrer"
