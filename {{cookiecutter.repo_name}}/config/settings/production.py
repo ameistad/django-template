@@ -21,15 +21,19 @@ WHITENOISE_MIDDLEWARE = ['whitenoise.middleware.WhiteNoiseMiddleware', ]
 MIDDLEWARE = WHITENOISE_MIDDLEWARE + MIDDLEWARE
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-# Email
-DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL',
-                         default='{{ cookiecutter.repo_name }} <noreply@{{ cookiecutter.domain_name }}>')
+# This will make sure the request method is_secure() returns true.
+# https://docs.djangoproject.com/en/stable/ref/settings/#secure-proxy-ssl-header
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Use secure cookies
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
+
+# Email
+DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL',
+                         default='{{ cookiecutter.repo_name }} <noreply@{{ cookiecutter.domain_name }}>')
 
 # INSTALLED_APPS += ("anymail", )
 # ANYMAIL = {
