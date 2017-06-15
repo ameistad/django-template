@@ -24,7 +24,7 @@ Make sure {{ cookiecutter.domain_name }} points to your new docker-machine.
 
 __Load Docker environment into the shell and set {{ cookiecutter.repo_name }} as the active machine.__
 ```sh
-$ eval "$(docker-machine env  {{ cookiecutter.repo_name }})"
+$ eval "$(docker-machine env {{ cookiecutter.repo_name }})"
 ```
 
 Make sure the result of `docker-machine active` returns {{ cookiecutter.repo_name }}
@@ -33,16 +33,15 @@ __Build images as defined in docker-compose.yml.__
 ```sh
 $ docker-compose build
 ```
-
-__Start services in detached mode.__
-```sh
-$ docker-compose up -d
-```
-
 __Migrate and create superuser.__
 ```sh
 $ docker-compose run django python manage.py migrate
 $ docker-compose run django python manage.py createsuperuser
+```
+
+__Start services in detached mode.__
+```sh
+$ docker-compose up -d
 ```
 
 __Unset Docker environment variables when finished.__
