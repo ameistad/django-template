@@ -3,30 +3,32 @@
         # Passes through host information from the original request.
         # https://caddyserver.com/docs/proxy
         transparent
+    }
 
-        # Don't show Gunicorn as server header.
-        header_downstream -Server
+    header / {
+        # Don't show Caddy/Gunicorn as server header.
+        -Server
 
         # Enable HTTP Strict Transport Security (HSTS) to force clients to always connect via HTTPS (do not use if only testing)
-        # header_downstream +Strict-Transport-Security "max-age=31536000;"
+        Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
 
         # Don't send referer header.
-        header_downstream +Referrer-Policy "no-referrer"
+        Referrer-Policy "no-referrer"
 
-        # Enable cross-site filter (XSS) and tell browser to block detected attacks
-        header_downstream +X-XSS-Protection "1; mode=block"
+        # Enable cross-site filter (XSS) and tell browser to block detected attacks.
+        X-XSS-Protection "1; mode=block"
 
         # Prevent some browsers from MIME-sniffing a response away from the declared Content-Type
-        header_downstream +X-Content-Type-Options "nosniff"
+        X-Content-Type-Options "nosniff"
 
         # Enable a strict content security policy.
         # Edit this if you need external sources on your site.
         # See: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-        header_downstream +Content-Security-Policy "connect-src 'self'; default-src 'none'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src data: 'self'; object-src 'self'; style-src 'self'; script-src 'self';"
+        Content-Security-Policy "connect-src 'self'; default-src 'none'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src data: 'self'; object-src 'self'; style-src 'self'; script-src 'self';"
 
         # Don't allow resources to load within a frame/iframe.
         # This is handled with frame-ancestors 'none' in the content security policy. But not yet supported by older browsers.
-        header_downstream +X-Frame-Options "DENY"
+        X-Frame-Options "DENY"
     }
 
     # The email address to use with which to generate a certificate with Letsencrypt.
