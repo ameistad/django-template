@@ -3,7 +3,7 @@ This is an example how you could deploy the project to Digital Ocean with Docker
 
 __Make sure settings are correct__
 
-* Check that the `.env` file is setup correctly.
+* Change POSTGRES_USER, POSTGRES_PASSWORD and SECRET_KEY in `.env`.
 
 * Check that domain is correct in `docker-compose.yml`.
 
