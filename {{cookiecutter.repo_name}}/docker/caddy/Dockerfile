@@ -4,7 +4,7 @@ RUN apk add --no-cache openssh-client git tar curl
 
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://github.com/mholt/caddy/releases/download/v0.10.3/caddy_v0.10.3_linux_amd64.tar.gz" \
+      "https://github.com/mholt/caddy/releases/download/v0.10.4/caddy_v0.10.4_linux_amd64.tar.gz" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy \
  && chmod 0755 /usr/bin/caddy \
  && /usr/bin/caddy -version
