@@ -1,4 +1,4 @@
 -r base.txt
 
-django-extensions==1.9.8
+django-extensions==1.9.9
 ipython==6.2.1
